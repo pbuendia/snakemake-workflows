@@ -1,7 +1,8 @@
 # The main entry point of your BWA-Samtools workflow.
 
-SAMPLES = ["Rothia_mucilaginosa"]
-#Although only 1 sample this Tutorial requires the SAMPLES list
+rule all:
+    input:
+        "plots/quals.svg"
 
 rule bwa_map:
     input:
@@ -34,10 +35,10 @@ rule samtools_index:
 rule bcftools_call:
     input:
         fa="resources/Rothia_mucilaginosa_43675.AP014938.1.fasta",
-        #bam="results/sorted_reads/{sample}.bam",
-        #bai="results/sorted_reads/{sample}.bam.bai"
-        bam=expand("results/sorted_reads/{sample}.bam", sample=SAMPLES),
-        bai=expand("results/sorted_reads/{sample}.bam.bai", sample=SAMPLES)
+        bam="results/sorted_reads/{sample}.bam",
+        bai="results/sorted_reads/{sample}.bam.bai"
+        # bam=expand("results/sorted_reads/{sample}.bam", sample=SAMPLES),
+        # bai=expand("results/sorted_reads/{sample}.bam.bai", sample=SAMPLES)
     output:
         "results/calls/all.vcf"
     shell:
