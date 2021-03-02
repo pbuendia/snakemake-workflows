@@ -1,3 +1,3 @@
-# Skeleton for the Snakemake tutorial
+# BWA-Samtools Snakemake tutorial
 
-This repository hosts the skeleton code needed for the [Snakemake tutorial](http://snakemake.readthedocs.io/en/latest/tutorial).
+This repository hosts the code needed for the [Snakemake tutorial](http://snakemake.readthedocs.io/en/latest/tutorial).
