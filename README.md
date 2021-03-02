@@ -1,3 +1,3 @@
-# cookiecutter-snakemake-workflow
+# snakemake-workflows
 
-Cookiecutter template for snakemake workflows.
+Template for snakemake workflows.
